@@ -9,7 +9,15 @@ function navclick() {
     element.classList.add("hidden");
   }
 }
-
+window.onload = function() {
+  var element = document.getElementById("mode");
+  if (localStorage.getItem("theme") == "dark") {
+    element.classList.add("dark");
+  }
+  else {
+    element.classList.remove("dark");
+  }
+}
 function themechange() {
   var element = document.getElementById("mode");
   localStorage.setItem("theme", "dark");
